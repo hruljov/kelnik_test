@@ -4,7 +4,7 @@
 
 ``` bash
 # install dependencies
-npm insrall
+npm install
 
 # serve with hot reload at localhost:9999
 gulp
