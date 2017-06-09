@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-connect": "latest",
+    "gulp-imagemin": "latest",
+    "jshint": "latest",
+    "jshint-stylish": "latest",
+    "gulp-jshint": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-rigger": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylus": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "gulp.spritesmith": "latest",
+    "rimraf": "latest"
+  }
+}
