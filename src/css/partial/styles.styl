@@ -14,7 +14,7 @@ h1 {
     font-size: 50px;
 }
 
-//page layout
+//PAGE LAYOUT
 .page {
     background-image: url(../img/page_bg.png);
     background-size: auto;
@@ -22,15 +22,17 @@ h1 {
     background-repeat: repeat;
   }
 
-.page__container {
-    max-width: 1440px
+.container {
+    max-width: 960px
     width: 100%
     margin-left: auto
     margin-right: auto
 }
 
-//blocks
+//BLOCKS
+//header
 .header {
+    @extend .container;
     text-align: center;
     padding-top: 50px;
 }
@@ -49,7 +51,9 @@ h1 {
     text-align: center;
 }
 
+//sorting
 .sort {
+    @extend .container;
     text-align: center;
     padding: 10px 0 15px;
     font-size: 14px;
@@ -74,19 +78,15 @@ h1 {
     &--bottom::after{
         content: "\25bc";
     }
-    
+
     &--top::after {
         content: "\25b2";
     }
 
 }
 
-.content{
-    max-width: 1024px;
-    margin: auto;
-}
-
 .orders {
+    @extend .container;
     text-align: center;
 }
 
@@ -102,34 +102,36 @@ h1 {
     margin: 20px 10px;
     text-align: left;
     font-size: 13px;
+
+    &:hover {
+        border-color: #ff5e42;
+
+        .orders__button {
+            color: #ff5e42;
+            text-decoration: underline;
+        }
+    }
+
+    &--special {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 35px;
+            height: 55px;
+            position: absolute;
+            top: -5px;
+            right: 8px;
+            z-index: 1;
+            background-image: url(../img/star.png);
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;
+        }
+    }
 }
 
-.orders__item:hover {
-    border-color: #ff5e42;
-}
 
-.orders__item:hover .orders__button {
-    color: #ff5e42;
-    text-decoration: underline;
-}
-
-.orders__item--special {
-    position: relative;
-}
-
-.orders__item--special::before {
-    content: '';
-    width: 35px;
-    height: 55px;
-    position: absolute;
-    top: -5px;
-    right: 8px;
-    z-index: 1;
-    background-image: url(../img/star.png);
-    background-position: center;
-    background-size: auto;
-    background-repeat: no-repeat;
-}
 
 .orders__photo {
     width: auto;
