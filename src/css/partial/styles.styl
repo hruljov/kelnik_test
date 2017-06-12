@@ -1,7 +1,11 @@
+//global
 body {
-font-family: Tahoma, Geneva, sans-serif;
-min-height: 100%;
+    font-family: Tahoma, Geneva, sans-serif;
+    min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
 }
+
 h1 {
     font-weight: 500;
     font-family: 'Prototypster', sans-serif;
@@ -9,34 +13,48 @@ h1 {
     letter-spacing: 0.01em;
     font-size: 50px;
 }
+
+//page layout
 .page {
     background-image: url(../img/page_bg.png);
     background-size: auto;
     background-position: center;
     background-repeat: repeat;
-    padding: 51px 0 45px;
   }
 
+.page__container {
+    max-width: 1440px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+}
+
+//blocks
 .header {
     text-align: center;
+    padding-top: 50px;
 }
+
 .header__cover {
     height: 97px;
     background-image: url(../img/header_bg.png);
     background-size: contain;
-    background-position: 49% 50%;
+    background-position: center;
     background-repeat: no-repeat;
 }
+
 .header__title {
     margin: 0;
     padding: 20px 0;
     text-align: center;
 }
+
 .sort {
     text-align: center;
     padding: 10px 0 15px;
     font-size: 14px;
 }
+
 .sort__item {
     color: #ff5e42;
     display: inline-block;
@@ -45,26 +63,33 @@ h1 {
     position: relative;
     margin-right: 12px;
     margin-left: 12px;
+
+    &:after{
+        color: #2a2a2a;
+        position: absolute;
+        right: -16px;
+        top: 0;
+    }
+
+    &--bottom::after{
+        content: "\25bc";
+    }
+
+    &--top::after {
+        content: "\25b2";
+    }
+
 }
-.sort__item::after {
-    color: #2a2a2a;
-    position: absolute;
-    right: -16px;
-    top: 0;
-}
-.sort__item--bottom::after {
-    content: "\25bc";
-}
-.sort__item--top::after {
-    content: "\25b2";
-}
+
 .content{
     max-width: 1024px;
     margin: auto;
 }
+
 .orders {
     text-align: center;
 }
+
 .orders__item {
     display: inline-block;
     background: #ffffff;
@@ -78,16 +103,20 @@ h1 {
     text-align: left;
     font-size: 13px;
 }
+
 .orders__item:hover {
     border-color: #ff5e42;
 }
+
 .orders__item:hover .orders__button {
     color: #ff5e42;
     text-decoration: underline;
 }
+
 .orders__item--special {
     position: relative;
 }
+
 .orders__item--special::before {
     content: '';
     width: 35px;
@@ -101,19 +130,24 @@ h1 {
     background-size: auto;
     background-repeat: no-repeat;
 }
+
 .orders__photo {
     width: auto;
 }
+
 .orders__name {
     margin: 17px 0 0;
 }
+
 .orders__info {
     line-height: 1.5;
     min-height: 132px;
 }
+
 .orders__status {
     margin-bottom: 12px;
 }
+
 .orders__button {
     color: #b8b8b8;
     font-size: 24px;
@@ -124,12 +158,14 @@ h1 {
     cursor: pointer;
     font-weight: 500;
 }
+
 .button:hover,
 .button:active,
 .button:focus {
     outline: none;
     border: none;
 }
+
 .button {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -149,9 +185,11 @@ h1 {
     letter-spacing: 0.01em;
     color: #ff5e42;
 }
+
 .button--scroll {
     margin-top: 44px;
 }
+
 .footer {
     background-image: url(../img/footer_bg.png);
     background-size: auto;
@@ -159,6 +197,7 @@ h1 {
     background-repeat: repeat no-repeat;
     padding: 50px 0;
 }
+
 .footer__container {
     display: block;
     width: 1024px;
@@ -167,19 +206,23 @@ h1 {
     padding-left: 25px;
     padding-right: 25px;
 }
+
 .footer .button {
     font-size: 28px;
     margin-left: 75px;
 }
+
 .form-singup {
     padding: 0 25px;
 }
+
 .form-singup__fieldset {
     border: none;
     margin-bottom: 20px;
     margin: 0;
     padding: 0;
 }
+
 .textfield {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -198,6 +241,7 @@ h1 {
     text-align: left;
     letter-spacing: 0;
 }
+
 .textfield__label {
     font-family: 'Prototypster', sans-serif;
     font-size: 14px;
@@ -208,12 +252,14 @@ h1 {
     display: inline-block;
     margin-bottom: 0;
 }
+
 .textfield__error {
     color: #ff5e42;
     font-size: 15px;
     display: none;
     margin-left: 75px;
 }
+
 .checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -223,10 +269,12 @@ h1 {
     position: relative;
     margin-left: 70px;
 }
+
 .checkbox:not(checked) {
     z-index: -1;
     opacity: 0;
 }
+
 .checkbox + label {
     display: inline-block;
     position: relative;
@@ -239,6 +287,7 @@ h1 {
     letter-spacing: 0.01em;
     padding: 4px 0 4px 40px;
 }
+
 .checkbox + label::before {
     transition: 0.25s ease-out;
     content: '';
@@ -252,6 +301,7 @@ h1 {
     border: 2px solid #dedede;
     border-radius: 4px;
 }
+
 .checkbox + label::after {
     transition: 0.25s ease-out;
     content: '';
@@ -267,17 +317,21 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .checkbox:checked + label::before {
     background: transparent;
     border-color: #dedede;
 }
+
 .checkbox:checked + label::after {
     opacity: 1;
     top: 7px;
 }
+
 .form-singup {
     padding: 0 25px;
 }
+
 .form-singup__fieldset {
     margin: 0;
     border: none;
