@@ -19,6 +19,7 @@ h1 {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    height: 100%;
 }
 
 .content {
@@ -27,7 +28,7 @@ h1 {
     background-position: center;
     background-repeat: repeat;
     flex: 1 1 auto;
-  }
+ }
 
 .container {
     max-width: 960px
@@ -205,12 +206,7 @@ h1 {
 
 .footer__container {
     @extend .container;
-    display: block;
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 40px;
 }
 
 .footer .button {
@@ -218,13 +214,12 @@ h1 {
     margin-left: 75px;
 }
 
-.form-singup {
+.form-signup {
     padding: 0 25px;
 }
 
-.form-singup__fieldset {
+.form-signup__fieldset {
     border: none;
-    margin-bottom: 20px;
     margin: 0;
     padding: 0;
 }
