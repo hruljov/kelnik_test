@@ -1,3 +1,9 @@
+//SETTINGS
+$screen = {
+    desktop: 1440px,
+    tablet: 768px,
+    phone: 375px,
+}
 //GLOBAL
 body {
     font-family: Tahoma, Geneva, sans-serif;
@@ -202,16 +208,25 @@ h1 {
     background-position: 0 0;
     background-repeat: repeat no-repeat;
     flex: 0 0 auto;
+
+    .button {
+        font-size: 28px;
+        margin-left: 75px;
+
+        @media (max-width: $screen.phone) {
+            margin-top: 20px;
+            margin-left: 0;
+        }
+    }
 }
 
 .footer__container {
     @extend .container;
-    padding: 40px;
-}
+    padding: 20px;
 
-.footer .button {
-    font-size: 28px;
-    margin-left: 75px;
+    @media (max-width: $screen.phone) {
+        padding: 20px 0;
+    }
 }
 
 .form-signup {
@@ -220,8 +235,12 @@ h1 {
 
 .form-signup__fieldset {
     border: none;
-    margin: 0;
+    margin-bottom: 20px;
     padding: 0;
+
+    @media (max-width: $screen.phone) {
+        margin-bottom: 0;
+    }
 }
 
 .textfield {
