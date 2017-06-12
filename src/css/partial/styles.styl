@@ -16,10 +16,17 @@ h1 {
 
 //PAGE LAYOUT
 .page {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.content {
     background-image: url(../img/page_bg.png);
     background-size: auto;
     background-position: center;
     background-repeat: repeat;
+    flex: 1 1 auto;
   }
 
 .container {
@@ -167,8 +174,6 @@ h1 {
 }
 
 .button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     cursor: pointer;
     text-align: center;
     text-decoration: underline;
@@ -186,8 +191,8 @@ h1 {
     color: #ff5e42;
 }
 
-.button--scroll {
-    margin-top: 44px;
+.button-scroll {
+    padding: 40px;
 }
 
 .footer {
@@ -195,10 +200,11 @@ h1 {
     background-size: auto;
     background-position: 0 0;
     background-repeat: repeat no-repeat;
-    padding: 50px 0;
+    flex: 0 0 auto;
 }
 
 .footer__container {
+    @extend .container;
     display: block;
     width: 1024px;
     margin-left: auto;

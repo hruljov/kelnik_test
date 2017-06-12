@@ -1,5 +1,5 @@
 (function( $, g ) {
-   var buttonScroll = $('.button--scroll'),
+   var buttonScroll = $('.button-scroll'),
        body = $('body, html'),
        sort = $('.sort__item'),
        submitButton = $('#submit');
