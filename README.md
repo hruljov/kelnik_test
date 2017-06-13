@@ -25,3 +25,9 @@ gulp
     #gulp css:build - общий билд CSS
     #gulp fonts:build - билд шрифтов
     #gulp htaccess:build - билд .htaccess
+```
+## Build & deploy Travis CI
+```
+Ссылка не github page
+https://hruljov.github.io/kelnik_test/
+```
